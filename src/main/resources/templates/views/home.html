@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/default-layout}">
+<head layout:fragment="default-layout"></head>
+<body>
+<main>
+<section layout:fragment="content">
+    <div class="row featurette mt-5 mb-5">
+        <div class="col-md-12">
+            <h1>Welkom op de DieetSchema.nl</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis libero ut leo condimentum fringilla. Etiam accumsan ante et luctus ullamcorper. Etiam quis tempus neque. Pellentesque dignissim ut dolor rhoncus vehicula. Suspendisse quis pretium urna. Curabitur imperdiet, sem ut dignissim suscipit, eros libero eleifend orci, mollis dictum leo nisi in turpis. Mauris sed ex mi. Suspendisse id leo congue, condimentum tortor sit amet, pellentesque libero. In fermentum posuere dolor, ac tincidunt dui aliquet vitae. Etiam dictum ligula ac posuere dignissim. Morbi nec velit ac mi semper rutrum nec vitae diam.</p>
+            <p>Praesent vitae enim metus. Sed nec hendrerit dui, eget vestibulum massa. Etiam posuere, ante at ullamcorper hendrerit, risus ex facilisis ante, vel aliquet nulla mi non arcu. Pellentesque molestie ligula eget dignissim molestie. Suspendisse porttitor, metus vel dignissim cursus, quam lectus porttitor orci, quis interdum est diam eu dolor. Donec sed mauris et ante placerat commodo in et velit. Donec tincidunt augue nec posuere mollis. Integer velit risus, vehicula in fermentum at, semper nec lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </div>
+    </div>
+</section>
+<footer layout:replace="/layouts/default-layout :: default-footer">
+    <p>Replace the footer</p>
+</footer>
+</main>
+</body>
+</html>

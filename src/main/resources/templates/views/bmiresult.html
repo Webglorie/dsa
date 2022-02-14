@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/default-layout}">
+<head layout:fragment="default-layout"></head>
+<body>
+<main>
+  <section layout:fragment="content">
+    <div class="row featurette mt-5 mb-5">
+      <div class="col-md-12">
+        <h1>Result</h1>
+        <p th:text="'Lengte: ' + ${bmi.length}" />
+        <p th:text="'Gewicht: ' + ${bmi.weight}" />
+        <p th:text="'Leeftijd: ' + ${bmi.age}" />
+        <p th:text="'Leeftijd: ' + ${bmi.calculateBMI}" />
+        <br>
+        <a href="/bmi-berekenen/" >Opnieuw BMI berekenen</a><br>
+        <a href="/caloriebehoefte-berekenen/" >Caloriebehoefte berekenen met de bovenstaande gegevens</a>
+
+      </div>
+    </div>
+  </section>
+  <footer layout:replace="/layouts/default-layout :: default-footer">
+    <p>Replace the footer</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/default-layout}">
+<head layout:fragment="default-layout"></head>
+<body>
+<main>
+    <section layout:fragment="content">
+        <div class="row featurette mt-5 mb-5">
+            <div class="col-md-12">
+                <h1>BMI berekenen</h1>
+                <form action="#" th:action="@{/bmi-resultaat/}" th:object="${bmi}" method="post">
+                    <div class="form-group">
+                        <label>Uw geslacht</label>
+                        <div>
+                            <label class="custom-control custom-radio">
+                                <input name="geslachtRadio" type="radio" required="required" class="custom-control-input" value="1">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Man</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input name="geslachtRadio" type="radio" required="required" class="custom-control-input" value="2">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Vrouw</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lengteInput">Uw lengte</label>
+                        <input id="lengteInput" th:field="*{length}" name="lengteInput" placeholder="Lengte" type="text" aria-describedby="lengteInputHelpBlock" class="form-control">
+                        <span id="lengteInputHelpBlock" class="form-text text-muted">Vul uw lengte in centimeters in. Bijvoorbeed: 188</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gewichtInput">Uw gewicht</label>
+                        <input id="gewichtInput" th:field="*{weight}" name="gewichtInput" placeholder="Gewicht" type="text" aria-describedby="gewichtInputHelpBlock" class="form-control">
+                        <span id="gewichtInputHelpBlock" class="form-text text-muted">Vul uw gewicht in kilogram in en gebruik een punt indien u een decimaal wilt gebruiken. Bijvoorbeeld: 86.21</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="leeftijdInput">Uw leeftijd</label>
+                        <input id="leeftijdInput" th:field="*{age}" name="leeftijdInput" placeholder="Leeftijd" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button name="submit" type="submit" class="btn btn-primary">Bereken BMI</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer layout:replace="/layouts/default-layout :: default-footer">
+        <p>Replace the footer</p>
+    </footer>
+</main>
+</body>
+</html>
